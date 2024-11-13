@@ -1,0 +1,50 @@
+/* style.css */
+
+/* Style for the header */
+header {
+    background-color: #0a825e;
+    padding: 20px;
+
+}
+h1 {
+    color: rgb(89, 142, 60);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Style for the site title */
+.site-title {
+    color: rgb(31, 184, 255);
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.site-title:hover {
+    color: #FFD700;
+}
+
+/* Navigation bar styles */
+.nav-bar {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for each link in the nav bar */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 15px 100px;
+    margin: 0 5px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the nav links */
+.nav-link:hover {
+    background-color: #45a049;
+}
