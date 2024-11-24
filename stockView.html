@@ -32,6 +32,7 @@
     </style>
     <title>Ian Simpson's website</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body >
     <header>
@@ -51,3 +52,56 @@
             <a href="about.html" class="nav-link">About</a>
         </nav>
     </header>
+    <main>
+        <h1 class=>This page is for demonstration purposes and not intended to be used for investing
+             in its current and/or previous forms</h1>
+        <div class="stock" id="AAPL">AAPL: Loading...</div>
+        <div class="stock" id="GOOG">GOOG: Loading...</div>
+        <div class="stock" id="AMZN">AMZN: Loading...</div>
+        <div class="stock" id="MSFT">MSFT: Loading...</div>
+        <div class="chart" id="chart"></div>
+    <script>
+        
+        const API_KEY = 'ct052e1r01qo5uueoajgct052e1r01qo5uueoak0';
+        const stocks = ['AAPL', 'GOOG', 'MSFT', 'AMZN'];
+        
+        function updatePrice(symbol) {
+            fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${API_KEY}`)
+                .then(response => response.json())
+                .then(data => {
+                    const element = document.getElementById(symbol);
+                    const price = data.c;  // Current price
+                    const change = data.d;  // Price change
+                    
+                    element.className = 'stock ' + (change >= 0 ? 'up' : 'down');
+                    element.textContent = `${symbol}: $${price} (${change >= 0 ? '+' : ''}${change})`;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Update prices every 5 seconds
+        stocks.forEach(symbol => {
+            updatePrice(symbol);
+            setInterval(() => updatePrice(symbol), 5000);
+        });
+    </script>
+
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script>
+        new TradingView.widget({
+            "width": "100%",
+            "height": "290px",
+            "symbol": "NASDAQ:AAPL",
+            "interval": "D",
+            "timezone": "Ptc/UTC",
+            "theme": "light",
+            "style": "1",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "allow_symbol_change": true,
+            "container_id": "chart"
+        });
+    </script>
+    </main>
+</body>
+</html>

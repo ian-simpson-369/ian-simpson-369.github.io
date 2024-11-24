@@ -48,3 +48,10 @@ h1 {
 .nav-link:hover {
     background-color: #45a049;
 }
+.finance{background-image: image();}
+
+.stock {
+    color: greenyellow;
+    background-color: #1fc895;
+    font-weight: 1000;
+}

@@ -66,6 +66,7 @@ async function fetchPlaylistVideos() {
 }
 
 // Get a random video and display it
+//update to call one time and put a random video everyday
 async function displayRandomVideo() {
     const videos = await fetchPlaylistVideos();
     const randomVideo = videos[Math.floor(Math.random() * videos.length)];
