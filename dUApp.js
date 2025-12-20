@@ -27,6 +27,9 @@ const mishnayot = [
   const mishnahOfTheDay = mishnayot[mishnahIndex];
   document.getElementById("mishnah").innerText = mishnahOfTheDay;
 
+/*
+
+doesn't account for double parasha weeks in exile
  // Array of parashot starting with Hayye Sara
  const parshiyot = [
     "Hayye Sara", "Toledot", "Vayetze", "Vayishlah", "Vayeshev", 
@@ -51,6 +54,8 @@ function getCurrentParasha() {
 
     return parshiyot[currentParashaIndex];
 }
+*/
+
 
 // Update the displayed parasha
 document.getElementById("parasha").textContent = `This week's parasha is: ${getCurrentParasha()}`;

@@ -11,6 +11,13 @@ h1 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+img {
+  max-width: 100%; /* Prevents the image from being wider than the screen */
+  height: auto;    /* Keeps the image from looking squashed/stretched */
+  display: block;  /* Helps prevent unexpected spacing issues */
+}
+
+
 /* Style for the site title */
 .site-title {
     color: rgb(31, 184, 255);
