@@ -1,43 +1,64 @@
 /* style.css */
 
-/* Style for the header */
-header {
-    background-color: #0a825e;
-    padding: 20px;
+ body {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+            background-color: #b5b1a5;
+            
+            color: darkgreen;
 }
+
+header{
+    background-color: rgb(0, 174, 107);
+}
+
+
 h1 {
     color: rgb(89, 142, 60);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-img {
-  max-width: 100%; /* Prevents the image from being wider than the screen */
-  height: auto;    /* Keeps the image from looking squashed/stretched */
-  display: block;  /* Helps prevent unexpected spacing issues */
+nav ul {
+  list-style: none;      /* This completely deletes the bullet points */
+  margin: 0;             /* Removes default browser spacing */
+  padding: 0;            /* Removes the default indent on the left */
+  
+  /* 2. Turn it into a horizontal row instead of a vertical stack */
+  display: flex;         
+           /* Clean, modern spacing between your links */
+}
+
+/* 3. Clean up the default anchor link styles if you want */
+nav a {
+  text-decoration: none; /* Removes the classic blue underline */
+  color: inherit;        /* Makes the link inherit your text color */
 }
 
 
 /* Style for the site title */
-.site-title {
+.main-link {
     color: rgb(31, 184, 255);
     font-size: 40px;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px;
+    text-shadow: 5px 0px 0px darkblue;
 }
 
 /* Hover effect */
-.site-title:hover {
+.main-link:hover {
     color: #FFD700;
 }
 
+.not-mine{
+    font-size: 30px;
+    color: cadetblue;
+    text-shadow:2px 1px 0px darkgreen,
+                2px 1px 0px darkblue,
+                2px 1px 0px black;}
+
 /* Navigation bar styles */
 .nav-bar {
-    display:flex;
-    justify-content: left;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    padding: 1%;
 }
 
 /* Styling for each link in the nav bar */
@@ -45,9 +66,7 @@ img {
     color: white;
     text-decoration: none;
     padding: 15px 100px;
-    margin: 0 5px;
     background-color: #4CAF50;
-    border-radius: 5px;
     transition: background-color 0.3s;
 }
 
@@ -55,7 +74,11 @@ img {
 .nav-link:hover {
     background-color: #45a049;
 }
-.finance{background-image: image();}
+
+.home-pic{
+    width: 100%;
+    height: 575px;  
+}
 
 .stock {
     color: greenyellow;
