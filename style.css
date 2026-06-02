@@ -1,4 +1,9 @@
-/* style.css */
+@charset "UTF-8";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 
  body {
             font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -42,11 +47,15 @@ nav a {
     font-weight: bold;
     padding: 5px;
     text-shadow: 5px 0px 0px darkblue;
+    transition: color 0.3s, 
+                text-shadow 0.3s ease;
 }
 
 /* Hover effect */
 .main-link:hover {
     color: #FFD700;
+    text-shadow: 5px 0px 0px darkblue,
+                6px 1px 0px black;
 }
 
 .not-mine{
@@ -61,18 +70,30 @@ nav a {
     padding: 1%;
 }
 
+.nav-item{
+    margin-right: 10%;
+    
+    border-color: red;
+    border: 10px;}
+
 /* Styling for each link in the nav bar */
 .nav-link {
+    
+    border: 10px;
+    font-size: x-large;
     color: white;
-    text-decoration: none;
-    padding: 15px 100px;
-    background-color: #4CAF50;
-    transition: background-color 0.3s;
+    text-shadow: 3px 1px 0px #4CAF50;
+    
+   
+    transition: color 0.3s, 
+                text-shadow 0.3s ease;
 }
 
 /* Hover effect for the nav links */
 .nav-link:hover {
-    background-color: #45a049;
+    color: #45a049;
+    text-shadow: 2.5px 0.75px 0px lightgreen,
+                3.5px 1.5px 0px white;
 }
 
 .home-pic{
